@@ -1,0 +1,10 @@
+C:\Users\T\Desktop\learn\ССП\2\bin\Debug\net4.7.2\2.exe.config
+C:\Users\T\Desktop\learn\ССП\2\bin\Debug\net4.7.2\2.exe
+C:\Users\T\Desktop\learn\ССП\2\bin\Debug\net4.7.2\2.pdb
+C:\Users\T\Desktop\learn\ССП\2\obj\Debug\net4.7.2\2.csproj.AssemblyReference.cache
+C:\Users\T\Desktop\learn\ССП\2\obj\Debug\net4.7.2\2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\T\Desktop\learn\ССП\2\obj\Debug\net4.7.2\2.AssemblyInfoInputs.cache
+C:\Users\T\Desktop\learn\ССП\2\obj\Debug\net4.7.2\2.AssemblyInfo.cs
+C:\Users\T\Desktop\learn\ССП\2\obj\Debug\net4.7.2\2.csproj.CoreCompileInputs.cache
+C:\Users\T\Desktop\learn\ССП\2\obj\Debug\net4.7.2\2.exe
+C:\Users\T\Desktop\learn\ССП\2\obj\Debug\net4.7.2\2.pdb
