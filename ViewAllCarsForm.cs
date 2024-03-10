@@ -23,6 +23,15 @@ public class ViewAllCarsForm : Form
 
     }
 
+    private bool CheckDatabaseConnection(OdbcConnection connection)
+    {
+        if (connection != null && connection.State == ConnectionState.Open)
+        {
+            return true;
+        }
+        return false;
+    }
+
     private void FormLayout()
     {
         // Set up form properties
@@ -44,6 +53,13 @@ public class ViewAllCarsForm : Form
         // Retrieve data from the "Cars" table
         using (OdbcCommand command = new OdbcCommand("SELECT * FROM Cars", connection))
         {
+            if (!CheckDatabaseConnection(connection))
+            {
+
+                    MessageBox.Show("Database connection lost", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.DialogResult = DialogResult.Cancel;
+                    return;
+            }
             try
             {
                 using (OdbcDataAdapter adapter = new OdbcDataAdapter(command))
@@ -55,10 +71,21 @@ public class ViewAllCarsForm : Form
                     dataGridView.DataSource = dataTable;
                 }
             }
+            catch (OdbcException ex)
+            {
+                MessageBox.Show("Database connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.Cancel;
+                return;
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Database connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.Cancel;
             }
         }
     }
+
+
+    
+
 }

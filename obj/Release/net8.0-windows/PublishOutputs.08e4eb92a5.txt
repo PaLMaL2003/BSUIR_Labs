@@ -1,0 +1,14 @@
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\2.exe
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\2.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\2.deps.json
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\2.runtimeconfig.json
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\2.pdb
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\freebsd\lib\net8.0\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\illumos\lib\net8.0\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\ios\lib\net8.0\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\linux\lib\net8.0\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\osx\lib\net8.0\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\solaris\lib\net8.0\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\tvos\lib\net8.0\System.Data.Odbc.dll
+C:\Users\T\Desktop\learn\ССП\2 - Copy\bin\Release\net8.0-windows\publish\runtimes\win\lib\net8.0\System.Data.Odbc.dll

@@ -93,9 +93,15 @@ public class AddCarForm : Form
         {
             addCarToDatabase();
         }
+        catch (OdbcException ex)
+        {
+            MessageBox.Show("Database connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.DialogResult = DialogResult.Cancel;
+            return;
+        }
         catch (System.Exception ex)
         {
-            MessageBox.Show("Error: " + ex.Message);
+            MessageBox.Show("Database connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.DialogResult = DialogResult.Cancel;
             return;
         }
@@ -110,7 +116,7 @@ public class AddCarForm : Form
             return false;
 
         int.TryParse(_yearTextBox.Text, out int tempYear);
-        if (!int.TryParse(_yearTextBox.Text, out int year) || tempYear < 0)
+        if (!int.TryParse(_yearTextBox.Text, out int year) || tempYear < 0 || tempYear > 2024 || tempYear < 1917)
             return false;
 
         return true;

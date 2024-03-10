@@ -64,11 +64,23 @@ public class DeleteCarForm : Form
 
         try
         {
+            if (!CarExistsInDatabase())
+            {
+                MessageBox.Show("There is no car with the specified ID in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.Cancel;
+                return;
+            }
             removeCarFromDatabase();
+        }
+        catch (OdbcException ex)
+        {
+            MessageBox.Show("Database connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.DialogResult = DialogResult.Cancel;
+            return;
         }
         catch (System.Exception ex)
         {
-            MessageBox.Show("Error: " + ex.Message);
+            MessageBox.Show("Database connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.DialogResult = DialogResult.Cancel;
             return;
         }
@@ -94,5 +106,17 @@ public class DeleteCarForm : Form
             return false;
 
         return true;
+    }
+
+    private bool CarExistsInDatabase()
+    {
+        using (OdbcCommand command = new OdbcCommand("SELECT COUNT(*) FROM Cars WHERE id = ?", connection))
+        {
+            int.TryParse(_idTextBox.Text, out int parsedId);
+            Id = parsedId;
+            command.Parameters.AddWithValue("@carId", Id);
+            int count = (int)command.ExecuteScalar();
+            return count > 0;
+        }
     }
 }
